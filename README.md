@@ -181,7 +181,7 @@ Caso 6:
 ADN = ["TATTAT","AGTAAC","ATGAGA","ACTTAC","ATGTGG","TGATTT"]
 #Es mutante, se cumple de forma vertical y diagonal descendente
 ```
-Caso 6:
+Caso 7:
 ```
 ADN = ["TATTAT","AGTAAC","ATGAGA","GCTTAC","ATGCGG","TGATTT"]
 #No es mutante, no se cumple de forma horizontal, vertical ni diagonal
