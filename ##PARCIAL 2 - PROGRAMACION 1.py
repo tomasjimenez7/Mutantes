@@ -33,11 +33,17 @@ def esMutante(ADN):
         for fila in ADN: #Compara de forma horizontal
             if (fila[0] == fila[1] == fila[2] == fila[3]) | (fila[1] == fila[2] == fila[3] == fila[4]) | (fila[2] == fila[3] == fila[4] == fila[5]):
                 secuencia = secuencia + 1
+                if secuencia > 1:
+                    return True
+        
+        ADN_transpuesta = list(zip(*ADN)) #Transpongo los elementos para aplicar el metodo anterior
+        for fila in ADN_transpuesta: #Compara de forma horizontal
+            if (fila[0] == fila[1] == fila[2] == fila[3]) | (fila[1] == fila[2] == fila[3] == fila[4]) | (fila[2] == fila[3] == fila[4] == fila[5]):
+                secuencia = secuencia + 1
+                if secuencia > 1:
+                    return True
 
-        if secuencia > 1:
-            return True
-            
-        return False    
+        return False
 
 es_Mutante = esMutante(ADN)
 
