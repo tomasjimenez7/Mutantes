@@ -42,6 +42,20 @@ def esMutante(ADN):
                 secuencia = secuencia + 1
                 if secuencia > 1:
                     return True
+                
+        for fila in range(len(ADN)-3): #Controla las diagonales
+            for columna in range(len(ADN[0])-3):
+                if ADN[fila][columna] == ADN[fila+1][columna+1] == ADN[fila+2][columna+2] == ADN[fila+3][columna+3]:
+                    secuencia = secuencia + 1
+                    if secuencia > 1:
+                        return True
+
+        for fila in range(len(ADN)-3): #Controla las diagonales inversas
+            for columna in range(3, len(ADN[0])):
+                if ADN[fila][columna] == ADN[fila+1][columna-1] == ADN[fila+2][columna-2] == ADN[fila+3][columna-3]:
+                    secuencia = secuencia + 1
+                    if secuencia > 1:
+                        return True
 
         return False
 
